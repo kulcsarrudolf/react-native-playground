@@ -1,11 +1,14 @@
 import { useState } from "react";
+
 import { StyleSheet, Text, View, StatusBar } from "react-native";
-import { Button } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
+
 import Constants from "expo-constants";
+
 import AboutView from "./src/components/AboutView";
 import ServicesView from "./src/components/ServicesView";
 import TermsAndConditionsView from "./src/components/TermsAndConditionsView";
+import BackButton from "./src/components/BackButton";
 
 const topics = [
   {
@@ -37,20 +40,7 @@ export default function App() {
     <View style={styles.container}>
       <View style={{ marginHorizontal: 25 }}>
         <View>
-          <Button
-            buttonStyle={{
-              width: 50,
-              height: 50,
-              marginBottom: 20,
-              backgroundColor: "#f8f8f8",
-            }}
-            icon={{
-              name: "arrow-left",
-              size: 25,
-              color: "#B5B5B5",
-            }}
-            onPress={() => {}}
-          />
+          <BackButton />
         </View>
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
           About My Company
